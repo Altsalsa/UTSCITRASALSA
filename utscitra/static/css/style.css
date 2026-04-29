@@ -1,0 +1,359 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #ffffff; /* Contoh: Warna abu-abu sangat muda */
+}
+
+nav {
+    background-color: rgba(68, 0, 0, 0.95); /* Merah marun dengan sedikit transparansi */
+    backdrop-filter: blur(10px); /* Efek kaca modern */
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffcccc; /* Warna hover yang lebih lembut */
+}
+
+.hero-section {
+    padding: 100px 10% 60px;
+    max-width: 1200px;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: #2d2d2d;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #4facfe 0%, #f3729b 100%);
+    
+    /* Memastikan gradasi memotong teks */
+    -webkit-background-clip: text;
+    background-clip: text; 
+    
+    /* Membuat warna asli teks hilang agar gradasi di belakangnya muncul */
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Fallback jika webkit tidak dukung */
+    
+    display: inline-block; /* Sangat penting untuk elemen span */
+}
+
+.intro-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #440000; /* Konsisten dengan tema merah marun */
+    margin-bottom: 1.5rem;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    max-width: 800px;
+    border-left: 4px solid #440000; /* Aksen garis marun di samping teks */
+    padding-left: 20px;
+}
+
+/* Container Utama Section Proyek (Masih sama dengan sebelumnya) */
+.projects-section {
+    position: relative;
+    background-color: #471717; /* Warna gelap */
+    min-height: 100vh;
+    padding: 100px 50px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-text {
+    position: absolute;
+    /* Posisikan titik pojok kiri atas elemen di tengah container */
+    top: 50%;
+    left: 50%;
+    
+    /* Geser kembali elemen sejauh setengah dari lebar dan tingginya sendiri */
+    transform: translate(-50%, -50%);
+    
+    font-size: 40vw;
+    font-weight: 1000;
+    color: rgba(255, 255, 255, 0.03);
+    z-index: 1; /* Sebaiknya gunakan 1 agar tidak menutupi kotak proyek */
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+/* Container Kotak */
+.cards-container {
+    position: relative;
+    z-index: 2; /* Di atas teks latar */
+    width: 100%;
+    height: 80vh; /* Sesuaikan tinggi agar kotak memiliki ruang gerak */
+}
+
+/* Styling Kotak Proyek Baru */
+.project-box {
+    position: absolute;
+    background: #ffffff;    /* DIUBAH: Menjadi putih bersih */
+    padding: 30px;
+    width: 320px;
+    min-height: 200px;
+    border-radius: 12px;
+    border: 1px solid #ddd; /* DIUBAH: Border abu-abu muda agar soft */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2); /* DIUBAH: Bayangan lebih lembut (transparansi dikurangi) */
+    color: #333;            /* DIUBAH: Warna teks umum menjadi gelap */
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Styling Teks di Dalam Kotak Putih */
+.proj-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a1a1a; /* DIUBAH: Dari putih ke hitam/gelap */
+    margin-bottom: 10px;
+}
+
+.proj-desc {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;    /* DIUBAH: Abu-abu gelap agar tetap nyaman dibaca */
+    margin-bottom: 15px;
+}
+
+.proj-tag {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #e88796; /* DISARANKAN: Menggunakan warna pink/merah muda (sesuai gambar awal) agar senada */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Mengatur Posisi dan Rotasi (Tetap menggunakan desain "acak") */
+.box-1 { top: 10%; left: 10%; transform: rotate(-4deg); }
+.box-2 { top: 35%; left: 35%; transform: rotate(3deg); }
+.box-3 { top: 15%; left: 60%; transform: rotate(-2deg); }
+
+.project-box:hover {
+    transform: scale(1.05) rotate(0deg) translateY(-10px);
+    background-color: #fcfcfc; /* Sedikit perubahan warna putih saat di-hover */
+    border-color: #e88796; 
+    z-index: 10;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+/* Container untuk judul agar berada di tengah atau kiri sesuai selera */
+.section-header {
+    position: relative;
+    z-index: 3; /* Pastikan di atas teks raksasa */
+    margin-bottom: 50px;
+    text-align: left; /* Bisa diganti 'center' jika ingin di tengah */
+    width: 100%;
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin: 0;
+    letter-spacing: -1px;
+}
+
+/* Garis dekorasi di bawah judul */
+.underline {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(to right, #fb899c, #f9a4ba);
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+/* Pastikan projects-section menggunakan flex-direction column agar judul berada di atas */
+.projects-section {
+    display: flex;
+    flex-direction: column; /* Mengatur elemen berjejer ke bawah */
+    justify-content: flex-start; /* Mulai dari atas */
+    align-items: flex-start;
+    padding: 100px 80px; /* Beri sedikit ruang lebih di kiri */
+}
+
+:root {
+    --maroon: #471717;
+    --gold: #D4AF37;
+    --bg-cream: #FDFBF7;
+    --text-dark: #f8f4f4;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* SECTION TITLE STYLING */
+.section-title {
+    font-size: 2rem;
+    color: var(--maroon);
+    border-left: 5px solid var(--gold);
+    padding-left: 15px;
+    margin-bottom: 50px;
+    font-weight: 800;
+}
+
+/* ABOUT SECTION */
+.about-section {
+    background-color: var(--bg-cream);
+    padding: 80px 0;
+}
+
+/* Update pada bagian About Content */
+.about-content {
+    display: flex;
+    align-items: center; /* Foto dan teks sejajar secara vertikal di tengah */
+    justify-content: flex-start;
+    gap: 60px;
+    flex-wrap: nowrap; /* Paksa tetap bersampingan di layar desktop */
+}
+
+.profile-image {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 6px solid var(--gold);
+    overflow: hidden;
+    flex-shrink: 0; /* Mencegah foto menciut */
+}
+
+/* Tambahkan ini agar teks mengisi ruang di sebelah foto */
+.profile-details {
+    flex: 1; 
+    min-width: 300px;
+}
+
+/* Responsif: Baru pindah ke bawah saat layar kekecilan (HP) */
+@media (max-width: 768px) {
+    .about-content {
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-image {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 30px;
+    }
+}
+
+/* EDUCATION TIMELINE */
+.education-section {
+    padding: 80px 0;
+    background-color: rgb(79, 26, 26);
+}
+
+.timeline-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 55px; /* Menyesuaikan posisi garis dengan titik */
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #e2e8f0;
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    width: 22%;
+    z-index: 2;
+    text-align: center;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background-color: var(--gold);
+    border-radius: 50%;
+    margin: 0 auto 30px; /* Jarak antara titik dan teks */
+    border: 4px solid white;
+    box-shadow: 0 0 0 2px #e2e8f0;
+}
+
+.timeline-content .year {
+    display: block;
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.timeline-content h4 {
+    color: var(--maroon);
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    font-size: 0.9rem;
+    color: #f9f6f6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .timeline-wrapper {
+        flex-direction: column;
+        gap: 40px;
+        padding-left: 30px;
+    }
+
+    .timeline-line {
+        width: 3px;
+        height: 100%;
+        left: 38px;
+        top: 0;
+    }
+
+    .timeline-item {
+        width: 100%;
+        display: flex;
+        text-align: left;
+        gap: 20px;
+    }
+
+    .dot {
+        margin: 0;
+        flex-shrink: 0;
+    }
+}

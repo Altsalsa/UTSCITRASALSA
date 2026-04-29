@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CitraSalsa</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=1.1">
+</head>
+<body>
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+</nav>
+<section class="hero-section">
+    <h1>Hi, <span class="gradient-text">Welcome</span></h1>
+    <p class="intro-text">I'm Citra Salsabila Hairunisyah,</p>
+    <p class="description">
+        A Data Science student focusing on large-scale data processing and statistical modeling. 
+        I have a strong interest in transforming complex data sets into strategic insights 
+        through predictive analytics and in-depth data visualization.
+    </p>
+</section>
+
+<section class="projects-section">
+    <h2 class="bg-text">PROJECTS</h2>
+
+    <div class="section-header">
+        <h2 class="main-title">My Experience</h2>
+        <div class="underline"></div>
+    </div>
+
+    <div class="cards-container">
+
+        <div class="project-box box-1">
+            <h3 class="proj-title">Analisis Sentimen Twitter</h3>
+            <p class="proj-desc">Menggunakan Python & NLP untuk menganalisis opini publik terhadap kebijakan pemerintah terbaru.</p>
+            <span class="proj-tag">Python, NLP</span>
+        </div>
+
+        <div class="project-box box-2">
+            <h3 class="proj-title">Visualisasi Data COVID-19</h3>
+            <p class="proj-desc">Dashboard interaktif menggunakan Tableau untuk melacak tren persebaran virus secara real-time.</p>
+            <span class="proj-tag">Tableau, Big Data</span>
+        </div>
+
+        <div class="project-box box-3">
+            <h3 class="proj-title">Prediksi Churn Pelanggan</h3>
+            <p class="proj-desc">Membangun model machine learning untuk memprediksi kemungkinan pelanggan berhenti berlangganan.</p>
+            <span class="proj-tag">ML, Scikit-Learn</span>
+        </div>
+
+    </div>
+</section>
+<section class="about-section">
+    <div class="container">
+        <h2 class="section-title">TENTANG SAYA</h2>
+        <div class="about-content">
+            <div class="profile-image">
+                <img src="{% static 'image/citra.jpeg' %}" alt="Foto Profil" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="profile-details">
+                <h3>Personal Information</h3>
+                <div class="info-item">
+                    <span class="label">Nama Lengkap:</span> <span class="value">Citra Salsabila Hairunisyah</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Peran:</span> <span class="value">Data Science Student</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Domisili:</span> <span class="value">Kecamatan Bringin, Kab.Semarang, Jawa Tengah</span>
+                </div>
+                <blockquote class="profile-quote">
+                    Seorang mahasiswa Data Science yang berfokus pada pengolahan data skala besar dan pemodelan statistik dengan minat kuat pada analitik prediktif.
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="education-section">
+    <div class="container">
+        <h2 class="section-title" style="color: white !important; font-weight: 900 !important; border-left-color: var(--gold) !important;">JENJANG PENDIDIKAN</h2>
+        
+        <div class="timeline-wrapper">
+            <div class="timeline-line"></div>
+            
+            <div class="timeline-item">
+                <div class="dot"></div>
+                <div class="timeline-content">
+                    <span class="year" style="font-weight: 900 !important; color: #D4AF37 !important;">2018 - 2021</span>
+                    <h4 style="font-weight: 800 !important; color: white !important;">SMP N 02 BRINGIN</h4>
+                    <p style="font-weight: 600 !important; color: white !important;">Fokus pada pembelajar menengah</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="dot"></div>
+                <div class="timeline-content">
+                    <span class="year" style="font-weight: 900 !important; color: #D4AF37 !important;">2021 - 2024</span>
+                    <h4 style="font-weight: 800 !important; color: white !important;">SMA Negeri 01 BRINGIN</h4>
+                    <p style="font-weight: 600 !important; color: white !important;">Jurusan MIPA (Matematika & Ilmu Pengetahuan Alam).</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="dot"></div>
+                <div class="timeline-content">
+                    <span class="year" style="font-weight: 900 !important; color: #D4AF37 !important;">2024 - Sekarang</span>
+                    <h4 style="font-weight: 800 !important; color: white !important;">Universitas Islam Negeri Salatiga</h4>
+                    <p style="font-weight: 600 !important; color: white !important;">S1 - Data Science</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="dot"></div>
+                <div class="timeline-content">
+                    <span class="year" style="font-weight: 900 !important; color: #D4AF37 !important;">Future</span>
+                    <h4 style="font-weight: 800 !important; color: white !important;">S2 DAN S3 ITB</h4>
+                    <p style="font-weight: 600 !important; color: white !important;"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
