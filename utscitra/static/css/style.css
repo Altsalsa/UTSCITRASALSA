@@ -195,6 +195,42 @@ h1 {
     padding: 100px 80px; /* Beri sedikit ruang lebih di kiri */
 }
 
+@media (max-width: 768px) {
+    /* 1. Hilangkan batasan tinggi agar konten tidak terpotong */
+    .projects-section {
+        padding: 40px 20px;
+        height: auto; 
+        display: block; /* Mengembalikan flow normal */
+    }
+
+    /* 2. Atur container agar kartu berjejer ke bawah */
+    .cards-container {
+        position: relative;
+        height: auto; 
+        display: flex;
+        flex-direction: column;
+        gap: 25px; /* Jarak antar kartu */
+        padding-top: 20px;
+    }
+
+    /* 3. Reset posisi kotak proyek agar tidak melayang/miring */
+    .project-box {
+        position: relative; /* Bukan absolute */
+        top: 0 !important;
+        left: 0 !important;
+        width: 100%; /* Lebar penuh mengikuti layar HP */
+        max-width: none;
+        transform: rotate(0deg) !important; /* Hilangkan rotasi agar rapi */
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    /* 4. Sembunyikan atau kecilkan teks latar 'PROJECTS' agar tidak mengganggu */
+    .bg-text {
+        display: none; 
+    }
+}
+
 :root {
     --maroon: #471717;
     --gold: #D4AF37;
@@ -233,36 +269,35 @@ h1 {
     flex-wrap: nowrap; /* Paksa tetap bersampingan di layar desktop */
 }
 
+/* --- Bagian Desktop --- */
 .profile-image {
-    width: 350px;
-    height: 350px;
+    width: 350px;  /* Harus ada ukuran pasti */
+    height: 350px; /* Harus ada ukuran pasti */
     border-radius: 50%;
     border: 6px solid var(--gold);
     overflow: hidden;
-    flex-shrink: 0; /* Mencegah foto menciut */
+    flex-shrink: 0;
+    /* Tambahan agar gambar di dalam benar-benar di tengah */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Tambahkan ini agar teks mengisi ruang di sebelah foto */
-.profile-details {
-    flex: 1; 
-    min-width: 300px;
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mengisi lingkaran tanpa gepeng */
+    object-position: center; /* Coba ganti ke center jika 'top' terlalu tinggi */
 }
 
-/* Responsif: Baru pindah ke bawah saat layar kekecilan (HP) */
+/* --- Bagian Mobile (HP) --- */
 @media (max-width: 768px) {
-    .about-content {
-        flex-wrap: wrap;
-        flex-direction: column;
-        text-align: center;
-    }
-    
     .profile-image {
-        width: 250px;
+        width: 250px; /* Mengecil di HP agar pas */
         height: 250px;
-        margin-bottom: 30px;
+        margin: 0 auto 30px; /* Memastikan posisi di tengah layar HP */
     }
 }
-
 /* EDUCATION TIMELINE */
 .education-section {
     padding: 80px 0;
@@ -355,5 +390,83 @@ h1 {
     .dot {
         margin: 0;
         flex-shrink: 0;
+    }
+}
+
+/* --- RESPONSIVE STYLE TAMBAHAN --- */
+
+@media (max-width: 768px) {
+    /* Navbar */
+    nav {
+        justify-content: center;
+        padding: 1rem;
+    }
+    
+    nav a {
+        margin: 0 10px;
+        font-size: 0.9rem;
+    }
+
+    /* Hero Section */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section {
+        padding: 60px 5% 30px;
+        text-align: center;
+    }
+
+    .description {
+        border-left: none;
+        border-top: 3px solid #440000;
+        padding-left: 0;
+        padding-top: 15px;
+        margin: 0 auto;
+    }
+
+    /* Projects Section (Perbaikan Utama) */
+    .projects-section {
+        padding: 60px 20px;
+        height: auto;
+        min-height: auto;
+    }
+
+    .bg-text {
+        font-size: 25vw; /* Kecilkan teks latar */
+    }
+
+    .cards-container {
+        height: auto; /* Biarkan container memanjang sesuai isi */
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .project-box {
+        position: relative; /* Ubah dari absolute ke relative */
+        top: 0 !important;
+        left: 0 !important;
+        transform: rotate(0deg) !important; /* Hilangkan rotasi di HP agar rapi */
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .project-box:hover {
+        transform: scale(1.02) !important; /* Hover yang lebih halus untuk layar sentuh */
+    }
+
+    .main-title {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .underline {
+        margin: 10px auto; /* Garis judul ke tengah */
+    }
+
+    .section-header {
+        text-align: center;
     }
 }

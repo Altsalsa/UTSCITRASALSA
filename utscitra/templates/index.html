@@ -2,61 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CitraSalsa</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}?v=1.1">
 </head>
 <body>
-<nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-</nav>
-<section class="hero-section">
-    <h1>Hi, <span class="gradient-text">Welcome</span></h1>
-    <p class="intro-text">I'm Citra Salsabila Hairunisyah,</p>
-    <p class="description">
-        A Data Science student focusing on large-scale data processing and statistical modeling. 
-        I have a strong interest in transforming complex data sets into strategic insights 
-        through predictive analytics and in-depth data visualization.
-    </p>
-</section>
-
-<section class="projects-section">
-    <h2 class="bg-text">PROJECTS</h2>
-
-    <div class="section-header">
-        <h2 class="main-title">My Experience</h2>
-        <div class="underline"></div>
-    </div>
-
-    <div class="cards-container">
-
-        <div class="project-box box-1">
-            <h3 class="proj-title">Analisis Path</h3>
-            <p class="proj-desc">Implementasi Korelasi 3 Variabel Menggunakan SPSS.</p>
-            <span class="proj-tag">SPSS</span>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+    </nav>
+    <section class="hero-section">
+        <h1>Hi, <span class="gradient-text">Welcome</span></h1>
+        <p class="intro-text">I'm Citra Salsabila Hairunisyah,</p>
+        <p class="description">
+            A Data Science student focusing on large-scale data processing and statistical modeling. 
+            I have a strong interest in transforming complex data sets into strategic insights 
+            through predictive analytics and in-depth data visualization.
+        </p>
+    </section>
+    <section class="projects-section">
+        <h2 class="bg-text">PROJECTS</h2>
+        <div class="section-header">
+            <h2 class="main-title">My Experience</h2>
+            <div class="underline"></div>
         </div>
-
-        <div class="project-box box-2">
-            <h3 class="proj-title">Visualisasi Data COVID-19</h3>
-            <p class="proj-desc">Dashboard interaktif menggunakan Tableau untuk melacak tren persebaran virus secara real-time.</p>
-            <span class="proj-tag">Tableau, Big Data</span>
+        <div class="cards-container">
+            <div class="project-box box-1">
+                <h3 class="proj-title">Analisis Path</h3>
+                <p class="proj-desc">Implementasi Korelasi 3 Variabel Menggunakan SPSS.</p><span class="proj-tag">SPSS</span>
+            </div>
+            <div class="project-box box-2">
+                <h3 class="proj-title">Topologi</h3>
+                <p class="proj-desc">Merancang dan mensimulasikan arsitektur jaringan menggunakan topologi [Star/Mesh/Hybrid] untuk mengoptimalkan efisiensi transmisi data.</p>
+                <span class="proj-tag">Cisco</span>
+            </div>
+            <div class="project-box box-3">
+                <h3 class="proj-title">Teknik Simulasi</h3>
+                <p class="proj-desc">Membangun model machine learning untuk memprediksi kemungkinan pelanggan berhenti berlangganan.</p>
+                <span class="proj-tag">Python</span>
+            </div>
         </div>
-
-        <div class="project-box box-3">
-            <h3 class="proj-title">Prediksi Churn Pelanggan</h3>
-            <p class="proj-desc">Membangun model machine learning untuk memprediksi kemungkinan pelanggan berhenti berlangganan.</p>
-            <span class="proj-tag">ML, Scikit-Learn</span>
-        </div>
-
-    </div>
 </section>
 <section class="about-section">
     <div class="container">
         <h2 class="section-title">TENTANG SAYA</h2>
         <div class="about-content">
             <div class="profile-image">
-                <img src="{% static 'image/citra.jpeg' %}" alt="Foto Profil" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="{% static 'image/citra.jpeg' %}">
             </div>
             <div class="profile-details">
                 <h3>Personal Information</h3>
